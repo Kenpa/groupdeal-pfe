@@ -1,6 +1,6 @@
 <div class="col-sm-6 col-md-3" ng-repeat="product in thbCtrl.products | category:category">
     <a href="#">
-        <div class="thumbnail"><img class="img-rounded" src="assets/thumbnails/iphone4s.jpg">
+        <div class="thumbnail"><img class="img-rounded" ng-src="{{product.images}}">
             <div class="caption text-center">
                 <h3>{{ product.title }}</h3>
                 <p>{{ product.desc }}</p>
