@@ -2,6 +2,7 @@
     {
         name : 'Apple Iphone 4s',
         desc : '',
+        category : 'hightech',
         oldPrice : 499.90,
         newPrice : 399.90,
         curOffers : 8,
@@ -11,6 +12,7 @@
     {
         name : 'Apple TV',
         desc : '',
+        category : 'hightech',
         oldPrice : 99.90,
         newPrice : 59.90,
         curOffers : 4,
@@ -20,6 +22,7 @@
     {
         name : 'Samsung Galaxy S5',
         desc : '',
+        category : 'hightech',
         oldPrice : 599.90,
         newPrice : 449.90,
         curOffers : 13,
@@ -29,6 +32,7 @@
     {
         name : 'Casque Beats',
         desc : '',
+        category : 'hightech',
         oldPrice : 299.00,
         newPrice : 229.00,
         curOffers : 5,

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+	<head>
+		<meta charset="utf-8">
+        
+		<title>GroupDeal</title>
+        
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        
+		<link rel="stylesheet" href="assets/style/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/style/bootflat/css/bootflat.min.css">
+		<link rel="stylesheet" href="assets/style/customcss/groupdeal.css">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800">
+
+		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript">
+			stLight.options({publisher: "13577a47-f840-4d71-875f-cb350f617fa9", doNotHash: false, doNotCopy: false, hashAddressBar: false});
+		</script>
+        
+
+	</head>
+
+	<body style="background-color : rgb(241,242,246);">
+        
+        <!-- Header and navbar -->
+        <gd-header></gd-header>
+
+        
+		<div class="container mainblock">
+            
+            <!-- Hot offer of the day --> 
+			<div class="jumbotron">
+				<div class="row row2">
+					<div class="jumbotron-photo col-md-9">
+						<img src="assets/hottopic/samsung.jpg">
+					</div>
+					<div class="jumbotron-contents col-md-3">
+						<h2><strong>Samsung Galaxy S5</strong></h2>
+						<p>20% de réduction pour l'achat de 15 smartphones Samsung Galaxy S5 ! N'hésitez-plus et achetez le smartphone de vos rêves !</p>
+
+						<hr>
+						<div>
+                            <h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> 8/15</span></span></h4>
+							<label class="newprice">399,90 €</label>
+							<label class="oldprice">499,90 €</label>
+						</div>
+
+						<button type="button" class="btn btn-lg btn-groupdeal btn-dayoffer">EN SAVOIR PLUS</button>
+						
+					</div>
+				</div>
+			</div>
+            
+            <!-- List of the different categories with thumbnails -->
+			<div class="categorie bodystyle" ng-controller="ThumbnailController as thbCtrl">
+				<!-- Repeat the existent categories through rows -->
+                <div class="row" ng-repeat="category in thbCtrl.category">
+					<h2 class="cat-title">{{category}}  <span class="moreof"><a href="#">Voir toutes les offres {{category}}</a></span></h2>
+					<div class="row">
+                        <!-- Repeat the four "hottest" products of the current category -->
+						<product-thumbnail></product-thumbnail>
+					</div>
+				</div>
+
+			</div>     
+            				
+            <div class="row text-center">
+					<button type="button" class="showmore btn btn-lg btn-info">AFFICHER TOUTES LES CATEGORIES</button>
+            </div>
+            
+		</div>
+               
+        <!-- Footer -->
+        <gd-footer></gd-footer>
+
+        
+        <!-- Jquery bootstrap bootflat -->
+		<script type="text/javascript" src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootflat/icheck.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootflat/jquery.fs.selecter.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootflat/jquery.fs.stepper.min.js"></script>
+                        
+        <!-- Angularjs related js files -->
+        <script type="text/javascript" src="assets/js/angular/angular.min.js"></script>
+        <script type="text/javascript" src="app/app.module.js"></script>
+                        
+        <script type="text/javascript" src="app/shared/header/header.module.js"></script>
+        <script type="text/javascript" src="app/shared/header/header.directive.js"></script>
+        
+        <script type="text/javascript" src="app/shared/footer/footer.module.js"></script>
+        <script type="text/javascript" src="app/shared/footer/footer.directive.js"></script>
+                        
+        <script type="text/javascript" src="app/shared/thumbnail/thumbnail.module.js"></script>
+        <script type="text/javascript" src="app/shared/thumbnail/thumbnail.directive.js"></script>
+        <script type="text/javascript" src="app/shared/thumbnail/thumbnail.controller.js"></script>
+        <script type="text/javascript" src="app/shared/thumbnail/thumbnail.filter.js"></script>
+        
+        <!-- External plugins -->
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript">
+			stLight.options({publisher: "13577a47-f840-4d71-875f-cb350f617fa9", doNotHash: false, doNotCopy: false, hashAddressBar: false});
+		</script>
+
+	</body>
+</html>

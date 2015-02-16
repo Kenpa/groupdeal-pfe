@@ -1,8 +1,8 @@
-<div class="col-sm-6 col-md-3" ng-repeat="product in thbCtrl.products">
+<div class="col-sm-6 col-md-3" ng-repeat="product in thbCtrl.products | category:category">
     <a href="#">
         <div class="thumbnail"><img class="img-rounded" src="assets/thumbnails/iphone4s.jpg">
             <div class="caption text-center">
-                <h3>{{ product.name }}</h3>
+                <h3>{{ product.title }}</h3>
                 <p>{{ product.desc }}</p>
                 <hr>
                 <div class="offerinfo">
