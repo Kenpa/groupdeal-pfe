@@ -1,5 +1,5 @@
 (function(){
 
-    angular.module('app',['header','footer']);
+    angular.module('app',['header','footer', 'home']);
  
 })();

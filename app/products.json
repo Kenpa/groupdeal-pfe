@@ -1,17 +1,4 @@
-(function() {
-    
-    angular.module('thumbnail').controller('ThumbnailController', ['$http', function($http) {
-        var store = this;
-        store.products = [];
-            
-/*        $http.get('../../products.json').success(function(data){
-            store.products = data;
-            console.log("products loaded");
-        }).error(function() {
-            console.log("error loading products");
-        });*/
-        
-        store.products = [
+[
     {
         name : 'Apple Iphone 4s',
         desc : '',
@@ -48,7 +35,3 @@
         maxOffers : 10
     }
 ]
-        
-    }]);
-
-})();

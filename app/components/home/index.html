@@ -54,71 +54,8 @@
 			<div class="categorie bodystyle">
 				<div class="row">
 					<h2 class="cat-title">High-Tech  <span class="moreof"><a href="#">Voir toutes les offres High-Tech</a></span></h2>
-					<div class="row">
-						<div class="col-sm-6 col-md-3">
-							<a href="#">
-								<div class="thumbnail"><img class="img-rounded" src="assets/thumbnails/iphone4s.jpg">
-									<div class="caption text-center">
-										<h3>Iphone 4s</h3>
-										<p>Blaer  ter tert ertertery ytrur rtrytru r... rterytr tytrytr</p>
-										<hr>
-										<div class="offerinfo">
-                                            <h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> 8/15</span></span></h4>
-											<label class="newprice">399,90 €</label>
-											<label class="oldprice">499,90 €</label>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<a href="#">
-								<div class="thumbnail"><img class="img-rounded" src="assets/thumbnails/appletv.jpg">
-									<div class="caption text-center">
-										<h3>Apple TV</h3>
-										<p>Blaer  ter tert ertertery ytrur rtrytru r... rterytr tytrytr</p>
-										<hr>
-										<div class="offerinfo">
-											<h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> 8/15</span></h4>
-											<label class="newprice">399,90 €</label>
-											<label class="oldprice">499,90 €</label>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<a href="#">
-								<div class="thumbnail"><img class="img-rounded" src="assets/thumbnails/samsungs4.jpg">
-									<div class="caption text-center">
-										<h3>Samsung Galaxy S4</h3>
-										<p>Blaer  ter tert ertertery ytrur rtrytru r... rterytr tytrytr</p>
-										<hr>
-										<div class="offerinfo">
-											<h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> 8/15</span></h4>
-											<label class="newprice">399,90 €</label>
-											<label class="oldprice">499,90 €</label>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<a href="#">
-								<div class="thumbnail"><img class="img-rounded" src="assets/thumbnails/beats.jpg">
-									<div class="caption text-center">
-										<h3>Casque Beats</h3>
-										<p>Blaer  ter tert ertertery ytrur rtrytru r... rterytr tytrytr</p>
-										<hr>
-										<div class="offerinfo">
-											<h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> 8/15</span></h4>
-											<label class="newprice">399,90 €</label>
-											<label class="oldprice">499,90 €</label>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
+					<div class="row" ng-controller="ThumbnailController as thbCtrl">
+						<product-thumbnail></product-thumbnail>
 					</div>
 				</div>
 
@@ -217,7 +154,11 @@
         <script type="text/javascript" src="../../shared/footer/footer.module.js"></script>
         <script type="text/javascript" src="../../shared/footer/footer.directive.js"></script>
                         
-        <script type="text/javascript" src="../home/home.module.js"></script>
+        <script type="text/javascript" src="home.module.js"></script>
+                        
+        <script type="text/javascript" src="thumbnail/thumbnail.module.js"></script>
+        <script type="text/javascript" src="thumbnail/thumbnail.directive.js"></script>
+        <script type="text/javascript" src="thumbnail/thumbnail.controller.js"></script>
         
         <!-- External plugins -->
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>

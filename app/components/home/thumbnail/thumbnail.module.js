@@ -1,5 +1,5 @@
 (function(){
 
-    angular.module('thumbnail',['quickview']);
+    angular.module('thumbnail',[]);
  
 })();
