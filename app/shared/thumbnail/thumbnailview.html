@@ -1,16 +1,11 @@
-<div class="col-sm-6 col-md-3" ng-repeat="product in thbCtrl.products | category:category">
+<div class="small-3 medium-3 large-3 columns" ng-repeat="product in thbCtrl.products | category:category.category">
     <a href="#">
-        <div class="thumbnail"><img class="img-rounded" ng-src="{{product.images}}">
-            <div class="caption text-center">
-                <h3>{{ product.title }}</h3>
-                <p>{{ product.desc }}</p>
-                <hr>
-                <div class="offerinfo">
-                    <h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> {{product.curOffers}}/{{product.maxOffers}}</span></span></h4>
-                    <label class="newprice">{{product.newPrice}}</label>
-                    <label class="oldprice">{{product.oldPrice}}</label>
-                </div>
-            </div>
+        <div class="thumbnail text-center">
+            <img class="thb-img" ng-src="{{product.images}}">
+            <h5 class="thb-title">{{ product.title }}</h5>
+            <span class="thb-offers label thb-label"><i class="fi-torso"> </i>{{product.curOffers}} / {{product.maxOffers}}</span>
+            <span class="thb-oldprice">{{product.oldPrice | currency:"&euro;" }}</span>
+            <span class="thb-newprice">{{product.newPrice | currency:"&euro;" }}</span>
         </div>
     </a>
 </div>

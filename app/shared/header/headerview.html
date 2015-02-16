@@ -1,59 +1,47 @@
-<div class="header">
-    <nav class="navbar navbar-inverse navbar-groupdeal" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">GroupDeal</a>
-            </div>
-            <div class="collapse navbar-collapse navbar-right" id="navbar-collapse-1">
-                <button type="button" class="btn btn-default navbar-btn">S'inscrire</button>
-                <button type="button" class="btn btn-groupdeal navbar-btn">Se connecter</button>
-            </div>
-        </div>
-    </nav>
+<!-- Login bar -->
+<nav class="top-bar" data-topbar role="navigation">
+    <div class="row">
+        <ul class="title-area">
+            <li class="name">
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
 
-    <nav class="navbar navbar-default navbar-groupdeal2" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse-2">
-                <div class="row">
-                    <div class="col-md-8">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a class="nav-link" href="#"><strong>Accueil</strong></a></li>
-                            <li><a class="nav-link current" href="#"><strong>Proposer une offre</strong></a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Catégories</strong> <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">High-Tech</a></li>
-                                    <li><a href="#">Electroménager</a></li>
-                                    <li><a href="#">Mode</a></li>
-                                    <li><a href="#">Restaurants</a></li>
-                                    <li><a href="#">Voyages</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="nav-link" href="#"><strong>Offres locales</strong></a></li>
-                            <li><a class="nav-link" href="#"><strong>Aide</strong></a></li>
+        <section class="top-bar-section">
+            <ul class="right">
+                <li class="login"><a href="#"><i class="fi-torso"> </i>Se connecter</a></li>
+                <li class="register"><a href="#"><i class="fi-pencil"> </i>S'inscrire</a></li>
+            </ul>
+        </section>
+    </div>
+</nav>
+
+<!-- Logo + Navbar -->
+
+<nav class="top-bar navigationbar" data-topbar role="navigation">
+    <div class="row">
+        <div class="small-9 medium-9 large-9 columns">
+            <section class="top-bar-section">
+                <ul class="navlist">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Proposer une offre</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Catégories</a>
+                        <ul class="dropdown">
+                            <li><a href="#">High-Tech</a></li>
+                            <li><a href="#">Loisirs</a></li>
+                            <li><a href="#">Mode</a></li>
+                            <li><a href="#">Restaurants</a></li>
+                            <li><a href="#">Voyages</a></li>
                         </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-search search-only" style="top:8px"><i class="search-icon glyphicon glyphicon-search"></i> 
-                            <input class="form-control search-query">
-                        </div>
-                    </div>
-            </div>
+                    </li>
+                    <li><a href="#">Offres locales</a></li>
+                    <li><a href="#">F.A.Q.</a></li>
+                </ul>
+            </section>
         </div>
-    </nav>
-</div>
+        <div class="small-3 medium-3 large-3 columns">
+            <input type="text">
+        </div>
+    </div>
+</nav>

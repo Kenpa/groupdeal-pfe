@@ -7,11 +7,14 @@
         
 		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
         
-		<link rel="stylesheet" href="assets/style/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/style/bootflat/css/bootflat.min.css">
-		<link rel="stylesheet" href="assets/style/customcss/groupdeal.css">
+        <link rel="stylesheet" type="text/css" href="assets/style/foundation/foundation.css">
+        <link rel="stylesheet" type="text/css" href="assets/style/foundation/normalize.css">
+        <link rel="stylesheet" type="text/css" href="assets/style/foundation/foundation-icons.css">
+        <link rel="stylesheet" type="text/css" href="assets/style/flaticon/flaticon.css">
+        <link rel="stylesheet" type="text/css" href="assets/style/customcss/index.css">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800">
-
+        
+        <script type="text/javascript" src="assets/js/vendor/modernizr.js"></script>
 		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 		<script type="text/javascript">
 			stLight.options({publisher: "13577a47-f840-4d71-875f-cb350f617fa9", doNotHash: false, doNotCopy: false, hashAddressBar: false});
@@ -20,42 +23,38 @@
 
 	</head>
 
-	<body style="background-color : rgb(241,242,246);">
+	<body>
         
         <!-- Header and navbar -->
         <gd-header></gd-header>
-
         
-		<div class="container mainblock">
-            
-            <!-- Hot offer of the day --> 
-			<div class="jumbotron">
-				<div class="row row2">
-					<div class="jumbotron-photo col-md-9">
-						<img src="assets/hottopic/samsung.jpg">
-					</div>
-					<div class="jumbotron-contents col-md-3">
-						<h2><strong>Samsung Galaxy S5</strong></h2>
-						<p>20% de réduction pour l'achat de 15 smartphones Samsung Galaxy S5 ! N'hésitez-plus et achetez le smartphone de vos rêves !</p>
+		<div>           
+            <!-- Hot offer of the day -->
+			<div class="row">
+				<div class="small-12 medium-12 columns hotnow">
+				    <img src="assets/img/samsung-galaxy-s5.jpg">
+                    <div class="hotproduct">
+                        <h4 class="hot-title">Samsung Galaxy S5</h4>
 
-						<hr>
-						<div>
-                            <h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> 8/15</span></span></h4>
-							<label class="newprice">399,90 €</label>
-							<label class="oldprice">499,90 €</label>
-						</div>
+                        <p class="hot-desc">20% de réduction pour l'achat de 15 smartphones Samsung Galaxy S5 ! 
+                        N'hésitez-plus et achetez le smartphone de vos rêves !</p>
 
-						<button type="button" class="btn btn-lg btn-groupdeal btn-dayoffer">EN SAVOIR PLUS</button>
-						
-					</div>
+                        <span class="hot-offers label hot-label"><i class="fi-torso"> </i>8 / 15</span>
+                        <span class="hot-oldprice">499,90 €</span>
+                        <span class="hot-newprice">399,90 €</span>
+                        
+                        <button type="button" class="btn btn-lg btn-groupdeal hot-btn right">EN SAVOIR PLUS</button>
+                    </div>
 				</div>
 			</div>
             
             <!-- List of the different categories with thumbnails -->
-			<div class="categorie bodystyle" ng-controller="ThumbnailController as thbCtrl">
+			<div ng-controller="ThumbnailController as thbCtrl">
 				<!-- Repeat the existent categories through rows -->
-                <div class="row" ng-repeat="category in thbCtrl.category">
-					<h2 class="cat-title">{{category}}  <span class="moreof"><a href="#">Voir toutes les offres {{category}}</a></span></h2>
+                <div class="row thb-header" ng-repeat="category in thbCtrl.categories">
+					<h5 class="cat-title">{{category.label}}  
+                        <span class="cat-showmore right"><a href="#">Voir toutes les offres {{category.label}}</a></span>
+                    </h5>
 					<div class="row">
                         <!-- Repeat the four "hottest" products of the current category -->
 						<product-thumbnail></product-thumbnail>
@@ -65,7 +64,7 @@
 			</div>     
             				
             <div class="row text-center">
-					<button type="button" class="showmore btn btn-lg btn-info">AFFICHER TOUTES LES CATEGORIES</button>
+				<button type="button" class="btn btn-lg btn-groupdeal">AFFICHER TOUTES LES CATEGORIES</button>
             </div>
             
 		</div>
@@ -74,12 +73,11 @@
         <gd-footer></gd-footer>
 
         
-        <!-- Jquery bootstrap bootflat -->
-		<script type="text/javascript" src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js"></script>
-		<script type="text/javascript" src="assets/js/bootflat/icheck.min.js"></script>
-		<script type="text/javascript" src="assets/js/bootflat/jquery.fs.selecter.min.js"></script>
-		<script type="text/javascript" src="assets/js/bootflat/jquery.fs.stepper.min.js"></script>
+        <!-- Jquery foundation -->
+		<script type="text/javascript" src="assets/js/vendor/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/foundation/foundation.js"></script>
+        <script type="text/javascript" src="assets/js/foundation/foundation.dropdown.js"></script>
+        <script type="text/javascript" src="assets/js/foundation/foundation.equalizer.js"></script>
                         
         <!-- Angularjs related js files -->
         <script type="text/javascript" src="assets/js/angular/angular.min.js"></script>
@@ -99,6 +97,7 @@
         <!-- External plugins -->
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 		<script type="text/javascript">
+            $(document).foundation();
 			stLight.options({publisher: "13577a47-f840-4d71-875f-cb350f617fa9", doNotHash: false, doNotCopy: false, hashAddressBar: false});
 		</script>
 

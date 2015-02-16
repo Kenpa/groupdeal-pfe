@@ -3,7 +3,29 @@
     angular.module('thumbnail').controller('ThumbnailController', ['$http', function($http) {
         var store = this;
         store.products = [];
-        store.category = ['hightech', 'voyage', 'mode', 'electromenager', 'loisirs'];
+        store.categories = 
+            [
+                {
+                    category:'hightech',
+                    label:'High-Tech'
+                },
+                {
+                    category:'voyage',
+                    label:'Voyages'
+                },
+                {
+                    category:'mode',
+                    label:'Mode'
+                },
+                {
+                    category:'electromenager',
+                    label:'Electroménager'
+                },
+                {
+                    category:'loisirs',
+                    label:'Loisirs'
+                }
+            ];
             
 /*        $http.get('../../products.json').success(function(data){
             store.products = data;
