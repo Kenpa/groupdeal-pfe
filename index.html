@@ -52,8 +52,8 @@
                         <span class="cat-showmore right"><a href="#">Voir toutes les offres {{category.label}}</a></span>
                     </h5>
 					<div class="row">
-                        <!-- Repeat the four "hottest" products of the current category -->
-                        <div class="small-3 medium-3 large-3 columns" ng-repeat="product in thbCtrl.products | category:category.category">
+                        <!-- Repeat the first four products (that aint "hot") of the current category -->
+                        <div class="small-3 medium-3 large-3 columns" ng-repeat="product in thbCtrl.products | category:category.category | isHot | limitTo : 4">
 						  <product-thumbnail></product-thumbnail>
                         </div>
 					</div>

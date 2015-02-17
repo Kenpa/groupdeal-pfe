@@ -43,7 +43,8 @@
         oldPrice : 599.90,
         newPrice : 449.90,
         curOffers : 8,
-        maxOffers : 10
+        maxOffers : 10,
+        isHot : true
     },
     
     {
@@ -54,7 +55,8 @@
         oldPrice : 399.90,
         newPrice : 319.90,
         curOffers : 7,
-        maxOffers : 10
+        maxOffers : 10,
+        isHot : false
     },
             
     {
@@ -65,7 +67,8 @@
         oldPrice : 499.90,
         newPrice : 399.90,
         curOffers : 8,
-        maxOffers : 15
+        maxOffers : 15,
+        isHot : false
     },
     
     {
@@ -76,7 +79,8 @@
         oldPrice : 99.90,
         newPrice : 59.90,
         curOffers : 4,
-        maxOffers : 20
+        maxOffers : 20,
+        isHot : false
     },
     
     {
@@ -87,7 +91,8 @@
         oldPrice : 399.90,
         newPrice : 249.90,
         curOffers : 13,
-        maxOffers : 15
+        maxOffers : 15,
+        isHot : false
     },
     
     {
@@ -98,7 +103,8 @@
         oldPrice : 299.00,
         newPrice : 229.00,
         curOffers : 5,
-        maxOffers : 10
+        maxOffers : 10,
+        isHot : false
     },
             
     {
@@ -109,7 +115,8 @@
         oldPrice : 799.90,
         newPrice : 599.90,
         curOffers : 8,
-        maxOffers : 10
+        maxOffers : 10,
+        isHot : false
     },
     
     {
@@ -120,7 +127,8 @@
         oldPrice : 899.90,
         newPrice : 649.90,
         curOffers : 4,
-        maxOffers : 8
+        maxOffers : 8,
+        isHot : false
     },
     
     {
@@ -131,7 +139,8 @@
         oldPrice : 699.90,
         newPrice : 519.50,
         curOffers : 13,
-        maxOffers : 20
+        maxOffers : 20,
+        isHot : false
     },
     
     {
@@ -142,7 +151,8 @@
         oldPrice : 399.90,
         newPrice : 229.90,
         curOffers : 4,
-        maxOffers : 10
+        maxOffers : 10,
+        isHot : false
     }
 ]
         
