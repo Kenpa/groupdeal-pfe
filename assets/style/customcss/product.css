@@ -1,0 +1,60 @@
+.prod-header {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.cur-prod {
+    font-weight: 600;
+}
+
+.prod-label {
+    vertical-align:top;
+    margin-left: 20px;
+    padding: 0.5rem 0.75rem 0.5rem;
+    font-size: 1rem;
+    background-color: #1abc9c;
+    color: #FFFFFF; 
+}
+
+.prod-oldprice {
+    font-size: 1.7rem;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.prod-newprice {
+    margin-left: 10px;
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #825be3;
+}
+
+.prod-btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+div.prod-author-info {
+    margin-top: 0px !important;
+}
+
+.prod-author {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.prod-author-safe {
+    font-size: 0.8rem !important;
+}
+
+.desc-label {
+    font-weight: 600;
+}
+
+.prod-desc {
+    margin-top: 20px;
+}
+
+.prod-desc-content {
+    margin-bottom: 50px;
+}

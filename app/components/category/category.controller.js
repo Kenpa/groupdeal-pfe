@@ -3,12 +3,12 @@
         
         // high tech is the default category
         
-        if ($routeParams.param != null)
-            $scope.routeCat = $routeParams.param;
+        if ($routeParams.cat != null)
+            $scope.routeCat = $routeParams.cat;
         else
             $scope.routeCat = 'hightech';
         
-        switch($routeParams.param) {
+        switch($routeParams.cat) {
             case 'hightech':
                  $scope.labelCat = 'High-Tech';
                  break;
@@ -30,4 +30,10 @@
         }
        
     });
+    
+    angular.module('category').controller("RouteProductController", function($scope, $routeParams) {       
+        if ($routeParams.idProd != null)
+            $scope.routeProd = $routeParams.idProd;      
+    });
+    
 })();
