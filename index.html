@@ -48,7 +48,7 @@
 				<!-- Repeat the existent categories through rows (show 2) -->
                 <div class="row thb-header" ng-repeat="category in thbCtrl.categories | limitTo : 2">
 					<h5 class="cat-title">{{category.label}}  
-                        <span class="cat-showmore right"><a href="#">Voir toutes les offres {{category.label}}</a></span>
+                        <span class="cat-showmore right"><a href="/app/components/category/category.html#/{{category.category}}">Voir toutes les offres {{category.label}}</a></span>
                     </h5>
 					<div class="row">
                         <!-- Repeat the first four products (that aint "hot") of the current category -->
