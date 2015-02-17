@@ -5,10 +5,11 @@
         this.products =
         [
             {
-                id : '1',
+                id : 1,
                 title : 'Samsung Galaxy S5',
                 desc : "20% de réduction pour l'achat de 15 smartphones Samsung Galaxy S5 ! N'hésitez-plus et achetez le smartphone de vos rêves !",
                 category : 'hightech',
+                author : 'Pikachu',
                 images : "/assets/img/samsung-galaxy-s5.jpg",
                 oldPrice : 599.90,
                 newPrice : 449.90,
@@ -18,10 +19,11 @@
             },
 
             {
-                id : '2',
+                id : 2,
                 title : 'Playstation 4 Gold Edition',
                 desc : '',
                 category : 'hightech',
+                author : 'Salamèche',
                 images : "/assets/img/ps4-gold-edition.jpg",
                 oldPrice : 399.90,
                 newPrice : 319.90,
@@ -31,10 +33,11 @@
             },
 
             {
-                id : '3',
+                id : 3,
                 title : 'Apple Iphone 4s',
                 desc : '',
                 category : 'hightech',
+                author : 'Carapuce',
                 images : "/assets/img/iphone-4s.jpg",
                 oldPrice : 499.90,
                 newPrice : 399.90,
@@ -44,10 +47,11 @@
             },
 
             {
-                id : '4',
+                id : 4,
                 title : 'Apple TV',
                 desc : '',
                 category : 'hightech',
+                author : 'Salamèche',
                 images : "/assets/img/apple-tv.jpg",
                 oldPrice : 99.90,
                 newPrice : 59.90,
@@ -57,10 +61,11 @@
             },
 
             {
-                id : '5',
+                id : 5,
                 title : 'Samsung Galaxy S4',
                 desc : '',
                 category : 'hightech',
+                author : 'Pikachu',
                 images : "/assets/img/samsung-galaxy-s4.jpg",
                 oldPrice : 399.90,
                 newPrice : 249.90,
@@ -70,10 +75,11 @@
             },
 
             {
-                id : '6',
+                id : 6,
                 title : 'Casque Beats',
                 desc : '',
                 category : 'hightech',
+                author : 'Salamèche',
                 images : "/assets/img/beats.jpg",
                 oldPrice : 299.00,
                 newPrice : 229.00,
@@ -83,10 +89,11 @@
             },
 
             {
-                id : '7',
+                id : 7,
                 title : 'Voyage à Honk Kong',
                 desc : '',
                 category : 'voyage',
+                author : 'Carapuce',
                 images : "/assets/img/hk-voyage.jpg",
                 oldPrice : 799.90,
                 newPrice : 599.90,
@@ -96,10 +103,11 @@
             },
 
             {
-                id : '8',
+                id : 8,
                 title : "Vivez l'expérience Japon !",
                 desc : '',
                 category : 'voyage',
+                author : 'Salamèche',
                 images : "/assets/img/tokyo-voyage.jpg",
                 oldPrice : 899.90,
                 newPrice : 649.90,
@@ -109,10 +117,11 @@
             },
 
             {
-                id : '9',
+                id : 9,
                 title : 'Vivez le rêve américain !',
                 desc : '',
                 category : 'voyage',
+                author : 'Carapuce',
                 images : "/assets/img/ny-voyage.jpg",
                 oldPrice : 699.90,
                 newPrice : 519.50,
@@ -122,10 +131,11 @@
             },
 
             {
-                id : '10',
+                id : 10,
                 title : 'Visitez la Laponie',
                 desc : '',
                 category : 'voyage',
+                author : 'Pikachu',
                 images : "/assets/img/laponie-voyage.jpg",
                 oldPrice : 399.90,
                 newPrice : 229.90,
