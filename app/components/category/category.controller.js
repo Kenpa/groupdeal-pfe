@@ -33,7 +33,7 @@
     
     angular.module('category').controller("RouteProductController", function($scope, $routeParams) {       
         if ($routeParams.idProd != null)
-            $scope.routeProd = $routeParams.idProd;      
+            $scope.idProd = $routeParams.idProd;      
     });
     
 })();

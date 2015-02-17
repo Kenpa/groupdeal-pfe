@@ -177,5 +177,13 @@
             return count;
         };
         
+        this.getProductById = function(id) {
+            var i = 0;
+            while (list.products[i].id != id )
+                i++;
+            
+            return list.products[i];
+        }
+        
     });
 })();
