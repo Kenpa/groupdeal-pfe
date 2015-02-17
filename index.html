@@ -19,24 +19,24 @@
 
 	</head>
 
-	<body>
+	<body ng-controller="ProductsController as prodCtrl">
         
         <!-- Header and navbar -->
         <gd-header></gd-header>
         
-		<div ng-controller="ThumbnailController as thbCtrl">           
+		<div>           
             <!-- Hot offer of the day -->
 			<div class="row">
 				<div class="small-12 medium-12 columns hotnow">
-				    <img ng-src="{{ thbCtrl.showHotProduct().images }}">
+				    <img ng-src="{{ prodCtrl.showHotProduct().images }}">
                     <div class="hotproduct">
-                        <h4 class="hot-title">{{ thbCtrl.showHotProduct().title }}</h4>
+                        <h4 class="hot-title">{{ prodCtrl.showHotProduct().title }}</h4>
 
-                        <p class="hot-desc">{{ thbCtrl.showHotProduct().desc }}</p>
+                        <p class="hot-desc">{{ prodCtrl.showHotProduct().desc }}</p>
 
-                        <span class="hot-offers label hot-label"><i class="fi-torso"> </i>{{ thbCtrl.showHotProduct().curOffers }} / {{ thbCtrl.showHotProduct().maxOffers }}</span>
-                        <span class="hot-oldprice">{{ thbCtrl.showHotProduct().oldPrice | currency:"&euro;" }}</span>
-                        <span class="hot-newprice">{{ thbCtrl.showHotProduct().newPrice | currency:"&euro;" }}</span>
+                        <span class="hot-offers label hot-label"><i class="fi-torso"> </i>{{ prodCtrl.showHotProduct().curOffers }} / {{ prodCtrl.showHotProduct().maxOffers }}</span>
+                        <span class="hot-oldprice">{{ prodCtrl.showHotProduct().oldPrice | currency:"&euro;" }}</span>
+                        <span class="hot-newprice">{{ prodCtrl.showHotProduct().newPrice | currency:"&euro;" }}</span>
                         
                         <button type="button" class="btn btn-lg btn-groupdeal hot-btn right">EN SAVOIR PLUS</button>
                     </div>
@@ -46,13 +46,13 @@
             <!-- List of the different categories with thumbnails -->
 			<div>
 				<!-- Repeat the existent categories through rows (show 2) -->
-                <div class="row thb-header" ng-repeat="category in thbCtrl.categories | limitTo : 2">
+                <div class="row thb-header" ng-repeat="category in prodCtrl.categories | limitTo : 2">
 					<h5 class="cat-title">{{category.label}}  
                         <span class="cat-showmore right"><a href="/app/components/category/category.html#/{{category.category}}">Voir toutes les offres {{category.label}}</a></span>
                     </h5>
 					<div class="row">
                         <!-- Repeat the first four products (that aint "hot") of the current category -->
-                        <div class="small-3 medium-3 large-3 columns" ng-repeat="product in thbCtrl.products | category:category.category | isHot | limitTo : 4">
+                        <div class="small-3 medium-3 large-3 columns" ng-repeat="product in prodCtrl.products | category:category.category | isHot | limitTo : 4">
                             <a href="#">
                                 <div class="thumbnail text-center">
 						          <product-thumbnail></product-thumbnail>
@@ -81,7 +81,9 @@
         <!-- Angularjs related js files -->
         <script type="text/javascript" src="assets/js/angular/angular.min.js"></script>
         <script type="text/javascript" src="assets/js/angular/angular-route.min.js"></script>
+        
         <script type="text/javascript" src="app/app.module.js"></script>
+        <script type="text/javascript" src="app/app.controller.js"></script>
                         
         <script type="text/javascript" src="app/shared/header/header.module.js"></script>
         <script type="text/javascript" src="app/shared/header/header.directive.js"></script>
@@ -91,7 +93,6 @@
                         
         <script type="text/javascript" src="app/shared/thumbnail/thumbnail.module.js"></script>
         <script type="text/javascript" src="app/shared/thumbnail/thumbnail.directive.js"></script>
-        <script type="text/javascript" src="app/shared/thumbnail/thumbnail.controller.js"></script>
         <script type="text/javascript" src="app/shared/thumbnail/thumbnail.filter.js"></script>
         
         <script type="text/javascript" src="app/components/category/category.module.js"></script>

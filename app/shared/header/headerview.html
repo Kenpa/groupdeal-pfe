@@ -27,12 +27,12 @@
                     <li><a href="#">Proposer une offre</a></li>
                     <li class="has-dropdown not-click">
                         <a href="#">Catégories</a>
-                        <ul class="dropdown">
-                            <li><a href="/app/components/category/category.html#/hightech">High-Tech</a></li>
-                            <li><a href="/app/components/category/category.html#/loisirs">Loisirs</a></li>
-                            <li><a href="/app/components/category/category.html#/mode">Mode</a></li>
-                            <li><a href="/app/components/category/category.html#/electromenager">Electroménager</a></li>
-                            <li><a href="/app/components/category/category.html#/voyage">Voyages</a></li>
+                        <ul class="dropdown text-left">
+                            <li><a href="/app/components/category/category.html#/hightech"><span class="label nbProdBadge">{{ prodCtrl.nbProdPerCat('hightech') }}</span> High-Tech </a></li>
+                            <li><a href="/app/components/category/category.html#/loisirs"><span class="label nbProdBadge">{{ prodCtrl.nbProdPerCat('loisirs') }} </span> Loisirs </a></li>
+                            <li><a href="/app/components/category/category.html#/mode"><span class="label nbProdBadge">{{ prodCtrl.nbProdPerCat('mode') }} </span> Mode </a></li>
+                            <li><a href="/app/components/category/category.html#/electromenager"><span class="label nbProdBadge">{{ prodCtrl.nbProdPerCat('electromenager') }} </span> Electroménager </a></li>
+                            <li><a href="/app/components/category/category.html#/voyage"><span class="label nbProdBadge">{{ prodCtrl.nbProdPerCat('voyage') }} </span> Voyages </a></li>
                         </ul>
                     </li>
                     <li><a href="#">Offres locales</a></li>

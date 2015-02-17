@@ -19,7 +19,7 @@
 
 	</head>
 
-	<body>
+	<body ng-controller="ProductsController as prodCtrl">
         
         <!-- Header and navbar -->
         <gd-header></gd-header>
@@ -39,7 +39,9 @@
         <!-- Angularjs related js files -->
         <script type="text/javascript" src="../../../assets/js/angular/angular.min.js"></script>
         <script type="text/javascript" src="../../../assets/js/angular/angular-route.min.js"></script>
+        
         <script type="text/javascript" src="../../app.module.js"></script>
+        <script type="text/javascript" src="../../app.controller.js"></script>
                         
         <script type="text/javascript" src="../../shared/header/header.module.js"></script>
         <script type="text/javascript" src="../../shared/header/header.directive.js"></script>
@@ -49,7 +51,6 @@
                         
         <script type="text/javascript" src="../../shared/thumbnail/thumbnail.module.js"></script>
         <script type="text/javascript" src="../../shared/thumbnail/thumbnail.directive.js"></script>
-        <script type="text/javascript" src="../../shared/thumbnail/thumbnail.controller.js"></script>
         <script type="text/javascript" src="../../shared/thumbnail/thumbnail.filter.js"></script>
         
         <script type="text/javascript" src="../../components/category/category.module.js"></script>
