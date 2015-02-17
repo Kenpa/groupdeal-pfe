@@ -1,6 +1,13 @@
 (function() {
     angular.module('category').controller("RouteCategoryController", function($scope, $routeParams) {
-        $scope.routeCat = $routeParams.param;
+        
+        // high tech is the default category
+        
+        if ($routeParams.param != null)
+            $scope.routeCat = $routeParams.param;
+        else
+            $scope.routeCat = 'hightech';
+        
         switch($routeParams.param) {
             case 'hightech':
                  $scope.labelCat = 'High-Tech';
@@ -19,6 +26,7 @@
                  break;
                 
             default:
+                 $scope.labelCat = 'High-Tech';
         }
        
     });
