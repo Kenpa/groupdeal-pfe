@@ -2,7 +2,15 @@
     
     angular.module('thumbnail').controller('ThumbnailController', ['$http', function($http) {
         var store = this;
-        store.products = [];
+        
+        store.showHotProduct = function() {
+            var i = 0;
+            while (!store.products[i].isHot)
+                i++;
+            
+            return store.products[i];
+        };
+        
         store.categories = 
             [
                 {
@@ -37,7 +45,7 @@
         store.products = [
     {
         title : 'Samsung Galaxy S5',
-        desc : '',
+        desc : "20% de réduction pour l'achat de 15 smartphones Samsung Galaxy S5 ! N'hésitez-plus et achetez le smartphone de vos rêves !",
         category : 'hightech',
         images : "/assets/img/samsung-galaxy-s5.jpg",
         oldPrice : 599.90,

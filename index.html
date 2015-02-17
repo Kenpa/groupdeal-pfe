@@ -24,20 +24,19 @@
         <!-- Header and navbar -->
         <gd-header></gd-header>
         
-		<div>           
+		<div ng-controller="ThumbnailController as thbCtrl">           
             <!-- Hot offer of the day -->
 			<div class="row">
 				<div class="small-12 medium-12 columns hotnow">
 				    <img src="assets/img/samsung-galaxy-s5.jpg">
                     <div class="hotproduct">
-                        <h4 class="hot-title">Samsung Galaxy S5</h4>
+                        <h4 class="hot-title">{{ thbCtrl.showHotProduct().title }}</h4>
 
-                        <p class="hot-desc">20% de réduction pour l'achat de 15 smartphones Samsung Galaxy S5 ! 
-                        N'hésitez-plus et achetez le smartphone de vos rêves !</p>
+                        <p class="hot-desc">{{ thbCtrl.showHotProduct().desc }}</p>
 
-                        <span class="hot-offers label hot-label"><i class="fi-torso"> </i>8 / 15</span>
-                        <span class="hot-oldprice">499,90 €</span>
-                        <span class="hot-newprice">399,90 €</span>
+                        <span class="hot-offers label hot-label"><i class="fi-torso"> </i>{{ thbCtrl.showHotProduct().curOffers }} / {{ thbCtrl.showHotProduct().maxOffers }}</span>
+                        <span class="hot-oldprice">{{ thbCtrl.showHotProduct().oldPrice | currency:"&euro;" }}</span>
+                        <span class="hot-newprice">{{ thbCtrl.showHotProduct().newPrice | currency:"&euro;" }}</span>
                         
                         <button type="button" class="btn btn-lg btn-groupdeal hot-btn right">EN SAVOIR PLUS</button>
                     </div>
@@ -45,7 +44,7 @@
 			</div>
             
             <!-- List of the different categories with thumbnails -->
-			<div ng-controller="ThumbnailController as thbCtrl">
+			<div>
 				<!-- Repeat the existent categories through rows -->
                 <div class="row thb-header" ng-repeat="category in thbCtrl.categories">
 					<h5 class="cat-title">{{category.label}}  
