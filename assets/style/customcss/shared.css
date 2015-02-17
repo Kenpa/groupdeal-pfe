@@ -75,8 +75,9 @@ ul.navlist > li > a:hover, ul.dropdown > li > a:hover{
 
 .thb-title {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 10px 0px;
+    margin-top: 20px;
 }
 
 .thb-label {

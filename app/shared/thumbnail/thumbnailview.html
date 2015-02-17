@@ -1,9 +1,5 @@
-<a href="#">
-    <div class="thumbnail text-center">
-        <img class="thb-img" ng-src="{{product.images}}">
-        <h5 class="thb-title">{{ product.title }}</h5>
-        <span class="thb-offers label thb-label"><i class="fi-torso"> </i>{{product.curOffers}} / {{product.maxOffers}}</span>
-        <span class="thb-oldprice">{{product.oldPrice | currency:"&euro;" }}</span>
-        <span class="thb-newprice">{{product.newPrice | currency:"&euro;" }}</span>
-    </div>
-</a>
+<img class="thb-img" ng-src="{{product.images}}">
+<h5 class="thb-title">{{ product.title }}</h5>
+<span class="thb-offers label thb-label"><i class="fi-torso"> </i>{{product.curOffers}} / {{product.maxOffers}}</span>
+<span class="thb-oldprice">{{product.oldPrice | currency:"&euro;" }}</span>
+<span class="thb-newprice">{{product.newPrice | currency:"&euro;" }}</span>

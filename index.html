@@ -28,7 +28,7 @@
             <!-- Hot offer of the day -->
 			<div class="row">
 				<div class="small-12 medium-12 columns hotnow">
-				    <img src="assets/img/samsung-galaxy-s5.jpg">
+				    <img ng-src="{{ thbCtrl.showHotProduct().images }}">
                     <div class="hotproduct">
                         <h4 class="hot-title">{{ thbCtrl.showHotProduct().title }}</h4>
 
@@ -45,23 +45,25 @@
             
             <!-- List of the different categories with thumbnails -->
 			<div>
-				<!-- Repeat the existent categories through rows -->
-                <div class="row thb-header" ng-repeat="category in thbCtrl.categories">
+				<!-- Repeat the existent categories through rows (show 2) -->
+                <div class="row thb-header" ng-repeat="category in thbCtrl.categories | limitTo : 2">
 					<h5 class="cat-title">{{category.label}}  
                         <span class="cat-showmore right"><a href="#">Voir toutes les offres {{category.label}}</a></span>
                     </h5>
 					<div class="row">
                         <!-- Repeat the first four products (that aint "hot") of the current category -->
                         <div class="small-3 medium-3 large-3 columns" ng-repeat="product in thbCtrl.products | category:category.category | isHot | limitTo : 4">
-						  <product-thumbnail></product-thumbnail>
+                            <a href="#">
+                                <div class="thumbnail text-center">
+						          <product-thumbnail></product-thumbnail>
+                                </div>
+                            </a>
                         </div>
 					</div>
 				</div>
-
-			</div>     
-            				
+			</div>             				
             <div class="row text-center">
-				<button type="button" class="btn btn-lg btn-groupdeal">AFFICHER TOUTES LES CATEGORIES</button>
+				<button type="button" class="btn btn-lg btn-groupdeal showallcat">AFFICHER TOUTES LES CATEGORIES</button>
             </div>
             
 		</div>
@@ -78,6 +80,7 @@
                         
         <!-- Angularjs related js files -->
         <script type="text/javascript" src="assets/js/angular/angular.min.js"></script>
+        <script type="text/javascript" src="assets/js/angular/angular-route.min.js"></script>
         <script type="text/javascript" src="app/app.module.js"></script>
                         
         <script type="text/javascript" src="app/shared/header/header.module.js"></script>
@@ -90,6 +93,10 @@
         <script type="text/javascript" src="app/shared/thumbnail/thumbnail.directive.js"></script>
         <script type="text/javascript" src="app/shared/thumbnail/thumbnail.controller.js"></script>
         <script type="text/javascript" src="app/shared/thumbnail/thumbnail.filter.js"></script>
+        
+        <script type="text/javascript" src="app/components/category/category.module.js"></script>
+        <script type="text/javascript" src="app/components/category/category.controller.js"></script>
+        <script type="text/javascript" src="app/components/category/category.config.js"></script>
         
         <!-- External plugins -->
 		<script type="text/javascript">

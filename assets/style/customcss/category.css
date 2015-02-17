@@ -17,3 +17,21 @@
     margin-bottom: 30px;
 }
 
+
+.btn-groupdeal {
+    margin-top: 10px;
+    color: #fff;
+
+    background-color: #825be3;
+    border-color: #825be3;
+    padding: 0.5rem 1.5rem 0.5rem;
+}
+
+.thb-title, .thb-label {
+    margin-left: 15px;
+}
+
+.thb-title {
+    margin-right: 15px;
+}
+
