@@ -1,246 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='app'>
 	<head>
 		<meta charset="utf-8">
-		<title>GroupDeal</title>
-		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="bootflat/css/bootflat.min.css">
-		<link rel="stylesheet" href="css/groupdeal.css">
         
-        <script src="bootflat/js/jquery.fs.selecter.min.js"></script>
-		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-		<script type="text/javascript">
-			stLight.options({publisher: "13577a47-f840-4d71-875f-cb350f617fa9", doNotHash: false, doNotCopy: false, hashAddressBar: false});
-		</script>
+		<title>GroupDeal</title>
+        
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        
+        <link rel="stylesheet" type="text/css" href="../../../assets/style/foundation/foundation.css">
+        <link rel="stylesheet" type="text/css" href="../../../assets/style/foundation/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../../../assets/style/foundation/foundation-icons.css">
+        <link rel="stylesheet" type="text/css" href="../../../assets/style/flaticon/flaticon.css">
+        <link rel="stylesheet" type="text/css" href="../../../assets/style/customcss/shared.css">
+        <link rel="stylesheet" type="text/css" href="../../../assets/style/customcss/category.css">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800">
+        
+        <script type="text/javascript" src="../../../assets/js/vendor/modernizr.js"></script>
 
 	</head>
-    
-    <body style="background-color : rgb(241,242,246);">
-    <div class="header">
-        <nav class="navbar navbar-inverse navbar-groupdeal" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">GroupDeal</a>
-                </div>
-                <div class="collapse navbar-collapse navbar-right" id="navbar-collapse-1">
-                    <button type="button" class="btn btn-default navbar-btn">S'inscrire</button>
-                    <button type="button" class="btn btn-groupdeal navbar-btn">Se connecter</button>
-                </div>
-            </div>
-        </nav>
 
-        <nav class="navbar navbar-default navbar-groupdeal2" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar-collapse-2">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a class="nav-link" href="#"><strong>Accueil</strong></a></li>
-                                <li><a class="nav-link current" href="#"><strong>Proposer une offre</strong></a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Catégories</strong> <b class="caret"></b>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">High-Tech</a></li>
-                                        <li><a href="#">Electroménager</a></li>
-                                        <li><a href="#">Mode</a></li>
-                                        <li><a href="#">Restaurants</a></li>
-                                        <li><a href="#">Voyages</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="nav-link" href="#"><strong>Offres locales</strong></a></li>
-                                <li><a class="nav-link" href="#"><strong>Aide</strong></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-search search-only" style="top:8px"><i class="search-icon glyphicon glyphicon-search"></i> 
-                                <input class="form-control search-query">
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </nav>
-    </div>
+	<body>
         
-    <div class="container mainblock">
-        <div class="categorie bodystyle">
-            <div class="row" style="margin-bottom : 20px">
-                <h3 class="col-md-4">High-Tech</h3>
-                <div class="col-md-3 filter">
-                    <div class="selecter  closed" tabindex="0">
-                        <select>
-                            <option disabled selected>Filtrer par ...</option>
-                            <option>Prix</option>
-                            <option>Nombre d'acheteurs</option>
-                            <option>Ordre alphabétique</option>
+        <!-- Header and navbar -->
+        <gd-header></gd-header>
+        
+		<div class="listproduct">           
+			<div class="row cat-header">
+				<div class="small-8 medium-8 columns">
+                    <h3 class="cur-cat">High-Tech</h3>
+                </div>
+                <div class="small-4 medium-4 columns">
+                    <form>
+                        <select class="product-filter">
+                            <option value="date">Ordre chronologique</option>
+                            <option value="price">Prix</option>
+                            <option value="remain-time">Temps restant</option>
+                            <option value="nb-offers">Nombre d'acheteurs</option>
+                            <option value="a-z">A-Z</option>
                         </select>
-                    </div>
+                    </form>
                 </div>
-            </div>
-
-            <div class="category-item col-md-12">
-                <div class="col-md-3">
-                    <img style="height:auto; width:100%;" src="assets/thumbnails/appletv.jpg">
-                </div>
-                <div class="col-md-6">
-                    <h4 class="title-cat-item">Apple TV</h4>
-                    <p class="author">Posté par Pikabo</p>
-                    <p class="description">Blaer  ter tert ertertery ytrur rtrytru r... rterytr tytrytr gerhr htjeije rgerhrthrt</br>
-                                            gerhr hytjytjyt jytr tethotrkjyjytpokterhy trhtyjyt trhtrjytjyt treyryt
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <div class="offerinfo">
-                        <h4><span class="label label-info"><span class="glyphicon glyphicon-user"> 8/15</span></h4>
-                        <label class="cat-old-price">499,90 €</label>
-                        <label class="cat-new-price">399,90 €</label>
-                    </div>
-                    <button type="button" class="btn btn-groupdeal btn-cat-item">Voir l'offre</button>
-                </div>
-            </div>
-            <div class="category-item col-md-12">
-                <div class="col-md-3">
-                    <img style="height:auto; width:100%;" src="assets/thumbnails/beats.JPG">
-                </div>
-                <div class="col-md-6">
-                    <h4 class="title-cat-item">Casque Beats by Dr. Dre</h4>
-                    <p class="author">Posté par Pikabo</p>
-                    <p class="description">Blaer  ter tert ertertery ytrur rtrytru r... rterytr tytrytr gerhr htjeije rgerhrthrt</br>
-                                            gerhr hytjytjyt jytr tethotrkjyjytpokterhy trhtyjyt trhtrjytjyt treyryt
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <div class="offerinfo">
-                        <h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> 8/15</span></h4>
-                        <label class="newprice">399,90 €</label>
-                        <label class="oldprice">499,90 €</label>
-                    </div>
-                    <button type="button" class="btn btn-lg btn-groupdeal btn-dayoffer">Voir l'offre</button>
-                </div>
-            </div>
-            <div class="category-item col-md-12">
-                <div class="col-md-3">
-                    <img style="height:auto; width:100%;" src="assets/thumbnails/iphone4s.jpg">
-                </div>
-                <div class="col-md-6">
-                    <h4 class="title-cat-item">Iphone 4S</h4>
-                    <p class="author">Posté par Pikabo</p>
-                    <p class="description">Blaer  ter tert ertertery ytrur rtrytru r... rterytr tytrytr gerhr htjeije rgerhrthrt</br>
-                                            gerhr hytjytjyt jytr tethotrkjyjytpokterhy trhtyjyt trhtrjytjyt treyryt
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <div class="offerinfo">
-                        <h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> 8/15</span></h4>
-                        <label class="newprice">399,90 €</label>
-                        <label class="oldprice">499,90 €</label>
-                    </div>
-                    <button type="button" class="btn btn-lg btn-groupdeal btn-dayoffer">Voir l'offre</button>
-                </div>
-            </div>
-            <div class="category-item col-md-12">
-                <div class="col-md-3">
-                    <img style="height:auto; width:100%;" src="assets/thumbnails/samsungs4.jpg">
-                </div>
-                <div class="col-md-6">
-                    <h4 class="title-cat-item">Samsung Galaxy S4</h4>
-                    <p class="author">Posté par Pikabo</p>
-                    <p class="description">Blaer  ter tert ertertery ytrur rtrytru r... rterytr tytrytr gerhr htjeije rgerhrthrt</br>
-                                            gerhr hytjytjyt jytr tethotrkjyjytpokterhy trhtyjyt trhtrjytjyt treyryt
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <div class="offerinfo">
-                        <h4><span class="label label-info requestinfo"><span class="glyphicon glyphicon-user"> 8/15</span></h4>
-                        <label class="newprice">399,90 €</label>
-                        <label class="oldprice">499,90 €</label>
-                    </div>
-                    <button type="button" class="btn btn-lg btn-groupdeal btn-dayoffer">Voir l'offre</button>
-                </div>
-            </div>
+			</div>
             
-        </div>
-        
-    </div>
-
-    <div class="row text-center example-pagination">
-        <div class="col-md-12">
-            <ul class="pagination">
-                <li class="active"><a href="#">Précédent</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">Suivant</a></li>
-            </ul>
-        </div>
-    </div>
-        
-    <div>
-        <div class="footer">
-            <div class="container">
-                <div class="clearfix">
-                    <div class="footer-logo">
-                        <a href="#">GroupDeal</a>
-                    </div>
-                    <dl class="footer-nav">
-                        <dt class="nav-title">A propos</dt>
-                        <dd class="nav-item"><a>Groupe 2</a></dd>
-                        <dd class="nav-item"><a>ICOM 2015</a></dd>
-                    </dl>
-                    <dl class="footer-nav">
-                        <dt class="nav-title">Contact</dt>
-                        <dd class="nav-item"><a>Tel : 01 60 54 18 45</a></dd>
-                        <dd class="nav-item"><a>Email : info@groupdeal.com</a></dd>
-                    </dl>
-                    <dl class="footer-nav">
-                        <dt class="nav-title">Newsletter</dt>
-                        <dd class="nav-item">
-                            <div class="input-group">
-                              <span class="input-group-addon" id="basic-addon1">@</span>
-                              <input type="text" class="form-control" placeholder="dupont@mail.com" aria-describedby="basic-addon1">
-                            </div>
-                        </dd>
-                    </dl>
-                    <dl class="footer-nav">
-                        <dt class="nav-title">Suivez-nous</dt>
-                        <dd class="nav-item">
-                            <span class='st_facebook_large' displayText='Facebook'></span>
-                            <span class='st_twitter_large' displayText='Tweet'></span>
-                            <span class='st_googleplus_large' displayText='Google +'></span>
-                        </dd>
-                    </dl>
+            <!-- List the different products of the category -->
+            <div class="row" ng-controller="ThumbnailController as thbCtrl">
+                <!-- Repeat the four "hottest" products of the current category -->
+                <div class="catspec-thb small-4 medium-4 large-4 columns" ng-repeat="product in thbCtrl.products | category:'hightech'">
+                <product-thumbnail></product-thumbnail>
                 </div>
-                <div class="footer-copyright text-center">Copyright © 2015 GroupDeal Tous droits réservés.</div>
             </div>
-        </div>
-    </div>
-        
-    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="bootflat/js/icheck.min.js"></script>
-    <script type="text/javascript" src="bootflat/js/jquery.fs.selecter.min.js"></script>
-    <script type="text/javascript" src="bootflat/js/jquery.fs.stepper.min.js"></script>
+    
+            
+		</div>
+               
+        <!-- Footer -->
+        <gd-footer></gd-footer>
 
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">
-        stLight.options({publisher: "13577a47-f840-4d71-875f-cb350f617fa9", doNotHash: false, doNotCopy: false, hashAddressBar: false});
-    </script>
-    <script type="text/javascript">
-        $("select").selecter();    
-    </script>
+        
+        <!-- Jquery foundation -->
+		<script type="text/javascript" src="../../../assets/js/vendor/jquery.js"></script>
+        <script type="text/javascript" src="../../../assets/js/foundation/foundation.js"></script>
+        <script type="text/javascript" src="../../../assets/js/foundation/foundation.dropdown.js"></script>
+        <script type="text/javascript" src="../../../assets/js/foundation/foundation.equalizer.js"></script>
+                        
+        <!-- Angularjs related js files -->
+        <script type="text/javascript" src="../../../assets/js/angular/angular.min.js"></script>
+        <script type="text/javascript" src="../../app.module.js"></script>
+                        
+        <script type="text/javascript" src="../../shared/header/header.module.js"></script>
+        <script type="text/javascript" src="../../shared/header/header.directive.js"></script>
+        
+        <script type="text/javascript" src="../../shared/footer/footer.module.js"></script>
+        <script type="text/javascript" src="../../shared/footer/footer.directive.js"></script>
+                        
+        <script type="text/javascript" src="../../shared/thumbnail/thumbnail.module.js"></script>
+        <script type="text/javascript" src="../../shared/thumbnail/thumbnail.directive.js"></script>
+        <script type="text/javascript" src="../../shared/thumbnail/thumbnail.controller.js"></script>
+        <script type="text/javascript" src="../../shared/thumbnail/thumbnail.filter.js"></script>
+        
+        <!-- External plugins -->
+		<script type="text/javascript">
+            $(document).foundation();
+		</script>
+
+	</body>
+</html>

@@ -11,15 +11,11 @@
         <link rel="stylesheet" type="text/css" href="assets/style/foundation/normalize.css">
         <link rel="stylesheet" type="text/css" href="assets/style/foundation/foundation-icons.css">
         <link rel="stylesheet" type="text/css" href="assets/style/flaticon/flaticon.css">
+        <link rel="stylesheet" type="text/css" href="assets/style/customcss/shared.css">
         <link rel="stylesheet" type="text/css" href="assets/style/customcss/index.css">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800">
         
-        <script type="text/javascript" src="assets/js/vendor/modernizr.js"></script>
-		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-		<script type="text/javascript">
-			stLight.options({publisher: "13577a47-f840-4d71-875f-cb350f617fa9", doNotHash: false, doNotCopy: false, hashAddressBar: false});
-		</script>
-        
+        <script type="text/javascript" src="assets/js/vendor/modernizr.js"></script>        
 
 	</head>
 
@@ -57,7 +53,9 @@
                     </h5>
 					<div class="row">
                         <!-- Repeat the four "hottest" products of the current category -->
-						<product-thumbnail></product-thumbnail>
+                        <div class="small-3 medium-3 large-3 columns" ng-repeat="product in thbCtrl.products | category:category.category">
+						  <product-thumbnail></product-thumbnail>
+                        </div>
 					</div>
 				</div>
 
@@ -95,10 +93,8 @@
         <script type="text/javascript" src="app/shared/thumbnail/thumbnail.filter.js"></script>
         
         <!-- External plugins -->
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 		<script type="text/javascript">
             $(document).foundation();
-			stLight.options({publisher: "13577a47-f840-4d71-875f-cb350f617fa9", doNotHash: false, doNotCopy: false, hashAddressBar: false});
 		</script>
 
 	</body>

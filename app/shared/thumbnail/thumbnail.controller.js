@@ -36,6 +36,28 @@
         
         store.products = [
     {
+        title : 'Samsung Galaxy S5',
+        desc : '',
+        category : 'hightech',
+        images : "/assets/img/samsung-galaxy-s5.jpg",
+        oldPrice : 599.90,
+        newPrice : 449.90,
+        curOffers : 8,
+        maxOffers : 10
+    },
+    
+    {
+        title : 'Playstation 4 Gold Edition',
+        desc : '',
+        category : 'hightech',
+        images : "/assets/img/ps4-gold-edition.jpg",
+        oldPrice : 399.90,
+        newPrice : 319.90,
+        curOffers : 7,
+        maxOffers : 10
+    },
+            
+    {
         title : 'Apple Iphone 4s',
         desc : '',
         category : 'hightech',
