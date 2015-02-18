@@ -8,7 +8,8 @@
             </h3>
         </div>    
     </div>
-
+    
+    <!-- Show product.image to the left side and other information on the right side -->
     <div class="row prod-content">
         <div class="small-9 medium-9 columns">
             <img ng-src="{{prodCtrl.getProductById(idProd).images}}">
@@ -22,6 +23,7 @@
                 <a class="button large btn-groupdeal prod-btn"><i class="fi-shopping-cart"></i> Ajouter au panier</a>
                 <hr>
             </div>
+            <!-- Social media external plugin -->
             <div class="row text-center prod-share">
                 <span class='st_sharethis_large' displayText='ShareThis'></span>
                 <span class='st_facebook_large' displayText='Facebook'></span>
@@ -29,6 +31,8 @@
                 <span class='st_googleplus_large' displayText='Google +'></span>
                 <span class='st_email_large' displayText='Email'></span>
             </div>
+            
+            <!-- Info on the offer's author -->
             <div class="row prod-author-info">
                 <hr>
                 <span class="prod-author">Posté par : {{ prodCtrl.getProductById(idProd).author }}</span>
@@ -41,11 +45,24 @@
             </div>
         </div>
     </div>
+    
+    <!-- Show product.desc -->
     <div class="row prod-desc">
         <div class="small-12 medium-12 columns">
             <h4 class="desc-label">Description de l'offre</h4>
             <p class="prod-desc-content">{{ prodCtrl.getProductById(idProd).desc }}</p>
             <hr>
+        </div>
+    </div>
+    
+    <!-- Show 4 similar products based on category AND tags -->
+    <div class="row prod-similar">
+        <div class="small-3 medium-3 large-3 columns end" ng-repeat="product in prodCtrl.products | tagsMatch : idProd  | limitTo : 4">
+            <a href="/app/components/category/category.html#/{{product.category}}/{{product.id}}">
+                <div class="thumbnail text-center">
+                  <product-thumbnail></product-thumbnail>
+                </div>
+            </a>
         </div>
     </div>
 </div>

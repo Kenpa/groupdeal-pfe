@@ -17,8 +17,10 @@
     border-bottom: 0px solid #1abc9c;
 }
 
-.hot-title, .hot-desc, .hot-offers {
+.hot-title, .hot-desc {
     color:#fff;
+    font-family: 'Raleway', serif;
+    font-weight: 600;
 }
 
 .hot-label {
@@ -54,11 +56,14 @@
 span.cat-showmore a {
     color : #555555;
     font-size: 0.9rem;
+    font-family: 'Raleway', serif;
+    font-weight: 700;
 }
 
 .cat-title {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Raleway', serif;
     margin-bottom: 15px;
 }
 

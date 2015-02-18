@@ -4,12 +4,14 @@
 }
 
 .cur-cat {
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Raleway', serif;
 }
 
 .product-filter {
     outline: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-family: 'Raleway', serif;
     color: gray;
 }
 

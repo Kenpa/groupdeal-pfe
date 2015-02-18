@@ -4,14 +4,15 @@
 }
 
 .cur-prod {
-    font-weight: 600;
+    font-family: 'Raleway', serif;
+    font-weight: 700;
 }
 
 .prod-label {
-    vertical-align:top;
     margin-left: 20px;
     padding: 0.5rem 0.75rem 0.5rem;
     font-size: 1rem;
+    font-weight: 700;
     background-color: #1abc9c;
     color: #FFFFFF; 
 }
@@ -39,22 +40,30 @@ div.prod-author-info {
 }
 
 .prod-author {
+    font-family: 'Raleway', serif;
     font-weight: 600;
     font-size: 1rem;
 }
 
 .prod-author-safe {
+    font-family: 'Raleway', serif;
     font-size: 0.8rem !important;
 }
 
 .desc-label {
+    font-family: 'Raleway', serif;
     font-weight: 600;
 }
 
 .prod-desc {
+    font-family: 'Raleway', serif;
     margin-top: 20px;
 }
 
 .prod-desc-content {
     margin-bottom: 50px;
+}
+
+.btn-groupdeal.prod-btn {
+    padding: 1.5rem 2rem 1.5rem !important;
 }

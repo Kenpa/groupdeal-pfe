@@ -1,7 +1,7 @@
 body {
     min-width: 62.5rem;
     margin: auto;
-    background-color: rgb(241,242,246);
+    background-color: rgb(241,242,246); 
 }
 
 .btn-groupdeal {
@@ -9,6 +9,8 @@ body {
   background-color: #825be3;
   border-color: #825be3;
   padding: 0.8rem 1.25rem 0.8rem;
+  font-family: 'Raleway', serif;
+  font-weight: 600;
 }
 
 .btn-groupdeal:hover,
@@ -49,10 +51,12 @@ ul.navlist > li {
 }
 
 ul.navlist > li > a {
+    font-family: 'Raleway', serif;
     color : #bdbdbd; 
 }
 
-ul.navlist > li > a:hover, ul.dropdown > li > a:hover{
+ul.navlist > li > a:hover, ul.dropdown > li > a:hover, ul.dropdown > li > a {
+    font-family: 'Raleway', serif;
     color : #fff !important; 
 }
 
@@ -80,9 +84,10 @@ ul.navlist > li > a:hover, ul.dropdown > li > a:hover{
 
 .thb-title {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     margin: 10px 0px;
     margin-top: 20px;
+    font-family: 'Raleway', serif;  
 }
 
 .thb-label {
@@ -121,9 +126,11 @@ ul.navlist > li > a:hover, ul.dropdown > li > a:hover{
     font-size: 0.75rem;
     color : gray;
     margin-top: 6px;
+    font-family: 'Raleway', serif;
 }
 
 a.logo-footer, a.logo-footer:hover {
+    font-family: 'Raleway', serif;
     font-weight: 700;
     color : gray;
 }
