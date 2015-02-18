@@ -35,29 +35,29 @@
         return function(items, idProd) {
             
             var filtered = [];
-            for (var i = 0; i < items.length; i++) 
-            {
-                var item = items[i];  
-                var j = 0;
-                var notPush = true;
-                
-                while (j < items[idProd].tags.length && notPush)
-                {
-                    var k=0;
-                    while (k < item.tags.length) {
-                        if (items[idProd].tags[j] != item.tags[k])
-                            k++;
+            for (var i = 0; i < items.length; i++) {
+                if ( i != idProd-1) {
+                    var item = items[i];  
+                    var j = 0;
+                    var notPush = true;
+
+                    while (j < items[idProd-1].tags.length && notPush) {
+                        var k=0;
+                        while (k < item.tags.length) {
+                            if (items[idProd-1].tags[j] != item.tags[k])
+                                k++;
+                            else
+                                k = 5555;
+                        }
+
+                        if (k > item.tags.length){
+                            filtered.push(item);
+                            notPush = false;
+                        }
                         else
-                            k = item.tags.length+1
+                            j++;
                     }
-                    
-                    if (k = item.tags.length+1){
-                        filtered.push(item);
-                        notPush = false;
-                    }
-                    else
-                        j++;
-                }              
+                }
             }
             return filtered;
         };

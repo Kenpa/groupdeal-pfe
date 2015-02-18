@@ -57,6 +57,9 @@
     
     <!-- Show 4 similar products based on category AND tags -->
     <div class="row prod-similar">
+        <div class="small-12 medium-12 columns">
+            <h4 class="similar-label">Offres similaires</h4>
+        </div>
         <div class="small-3 medium-3 large-3 columns end" ng-repeat="product in prodCtrl.products | tagsMatch : idProd  | limitTo : 4">
             <a href="/app/components/category/category.html#/{{product.category}}/{{product.id}}">
                 <div class="thumbnail text-center">

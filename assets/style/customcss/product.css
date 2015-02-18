@@ -50,7 +50,7 @@ div.prod-author-info {
     font-size: 0.8rem !important;
 }
 
-.desc-label {
+.desc-label, .similar-label {
     font-family: 'Raleway', serif;
     font-weight: 600;
 }
@@ -62,6 +62,10 @@ div.prod-author-info {
 
 .prod-desc-content {
     margin-bottom: 50px;
+}
+
+.similar-label {
+    margin-bottom: 15px;
 }
 
 .btn-groupdeal.prod-btn {
