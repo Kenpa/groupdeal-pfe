@@ -1,9 +1,6 @@
 (function() {
     
-    angular.module('app').controller('ProductsController', function() {
-        var list = this;
-        this.products =
-        [
+    var products = [
             {
                 id : 1,
                 title : 'Samsung Galaxy S5',
@@ -153,7 +150,19 @@
                 maxOffers : 10,
                 isHot : false
             }
-        ]
+        ];
+    
+    angular.module('app').controller('LookupController', ['$scope', function($scope) {
+        $scope.items = products;
+        $scope.state = closed;
+        $scope.change = function() {
+            var filtered = $filter('filter')($scope.items, $scope.query);
+        };
+    }]);
+    
+    angular.module('app').controller('ProductsController', function() {
+        var list = this;
+        this.products = products;
         
         this.categories = 
             [
@@ -177,7 +186,7 @@
                     category:'loisirs',
                     label:'Loisirs'
                 }
-        ];
+            ];
         
         this.showHotProduct = function() {
             var i = 0;

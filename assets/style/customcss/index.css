@@ -3,6 +3,8 @@
 -----------------------------------------*/
 
 .hotnow.columns {
+    position: relative;
+    z-index: 10;
     padding-left: 0;
     padding-right: 0; 
 }

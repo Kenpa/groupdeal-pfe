@@ -10,7 +10,7 @@
         <section class="top-bar-section">
             <ul class="right">
                 <li class="login"><a href="#"><i class="fi-torso"> </i>Se connecter</a></li>
-                <li class="register"><a href="#"><i class="fi-pencil"> </i>S'inscrire</a></li>
+                <li class="register"><a data-reveal-id="registerModal"><i class="fi-pencil"> </i>S'inscrire</a></li>
             </ul>
         </section>
     </div>
@@ -35,13 +35,20 @@
                             <li><a href="/app/components/category/category.html#/voyage"><span class="label nbProdBadge">{{ prodCtrl.nbProdPerCat('voyage') }} </span> Voyages </a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Offres locales</a></li>
                     <li><a href="#">F.A.Q.</a></li>
+                    <li><a href="#">Aide</a></li>
                 </ul>
             </section>
         </div>
-        <div class="small-3 medium-3 large-3 columns">
-            <input type="text">
+        <div class="small-3 medium-3 large-3 columns" ng-controller="LookupController">
+            <input type="text" ng-model="query" ng-change="search()">
+            <ul class="searchList" ng-show="query">
+                <li ng-repeat="item in items | query : query" ng-click="select(item)" search-list>
+                    <a class="searchres" href="/app/components/category/category.html#/{{item.category}}/{{item.id}}">
+                        {{ item.title }}
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

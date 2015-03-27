@@ -1,5 +1,5 @@
 (function(){
 
-    angular.module('app',['header','footer', 'thumbnail', 'category']);
+    angular.module('app',['header','footer', 'register', 'thumbnail', 'category']);
  
 })();

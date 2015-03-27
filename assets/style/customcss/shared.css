@@ -154,3 +154,88 @@ a.facebook:hover, a.twitter:hover {
 .footer .logo {
     padding-top : 15px;
 }
+
+/*---------------------------------------------------------------------*/
+/*----------------------------- MODAL -------------------------------- */
+/*---------------------------------------------------------------------*/
+.reveal-modal {
+    border-radius: 0 !important;
+    border : none !important;
+    width: 37.5rem !important;
+    padding : 0;
+}
+.registerTitle {
+    background-color: #825be3;
+    padding: 0.75rem 0;
+}
+.registerTitle .title {
+    display : block;
+    width: 30rem;
+    margin: 0 auto;
+    color : white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.reveal-modal .close-reveal-modal {
+    font-size: 2.5rem;
+    line-height: 1;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.25rem;
+    color: white;
+    font-weight: 500;
+    cursor: pointer; 
+}
+.registerContent {
+    padding : 1.5rem 0;
+}
+.registerContent .registerSubmit {
+    width: 100%;
+    margin-top : 2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    outline: none;
+    border-width: 0px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background-color: #825be3;
+    color: white;
+}
+.registerContent .registerSubmit:hover {
+    background-color: #967adc;
+}
+.registerContent label {
+    font-weight: 600;
+    color: gray;
+}
+.registerContent .agreement {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: gray;
+    font-weight: 400 !important;
+    font-size: 0.75rem !important;
+}
+.civilite {
+    margin-top: 7px !important;
+}
+
+.searchList {
+    position : absolute;
+    right : 15px;
+    width: 220px;
+    font-family: 'Raleway', serif;
+    background-color : #bdbdbd;
+    z-index: 1000;
+    margin-top: 0.7rem;
+}
+.searchList li {
+    padding: 0.25rem 0rem 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+nav.navigationbar ul li a.searchres {
+    background: none !important;
+    color : black !important;
+}

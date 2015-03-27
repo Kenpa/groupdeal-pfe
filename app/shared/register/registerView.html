@@ -1,0 +1,77 @@
+<form>
+    <div class="registerTitle">
+        <span class="title">Inscrivez-vous ! C'est gratuit !</span>
+    </div>
+    <div class="row registerContent">
+        <div class="small-12 medium-12 large-12 columns">
+            <div class="row">
+                <div class="small-3 medium-3 large-3 columns">
+                    <label class="right inline">Civilité :</label>
+                </div>
+                <div class="small-9 medium-9 large-9 columns civilite">
+                    <input type="radio" name="gender" value="M." id="monsieur"><label for="monsieur">M.</label>
+                    <input type="radio" name="gender" value="Mme." id="madame"><label for="madame">Mme.</label>
+                    <input type="radio" name="gender" value="Mlle." id="mademoiselle"><label for="mademeliselle">Mlle.</label>
+                </div>  
+            </div>
+            <div class="row">
+                <div class="small-3 medium-3 large-3 columns">
+                    <label for="identity-firstname" class="right inline">Nom</label>
+                </div>
+                <div class="small-6 medium-6 large-6 columns end">
+                    <input type="text" id="identity-firstname" required autofocus>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="small-3 medium-3 large-3 columns">
+                    <label for="identity-lastname" class="right inline">Prénom</label>
+                </div>
+                <div class="small-6 medium-6 large-6 columns end">
+                    <input type="text" id="identity-lastname" required autofocus>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="small-3 medium-3 large-3 columns">
+                    <label for="email" class="right inline">Adresse E-mail</label>
+                </div>
+                <div class="small-6 medium-6 large-6 columns end">
+                    <input type="email" id="email" required>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="small-3 medium-3 large-3 columns">
+                    <label for="username" class="right inline">Nom d'utilisateur</label>
+                </div>
+                <div class="small-6 medium-6 large-6 columns end">
+                    <input type="text" id="username" required autofocus>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-3 medium-3 large-3 columns">
+                    <label for="password" class="right inline">Mot de Passe</label>
+                </div>
+                <div class="small-6 medium-6 large-6 columns end">
+                    <input type="password" id="password" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-3 medium-3 large-3 columns">
+                    <label for="passwordre" class="right inline">Confirmez</label>
+                </div>
+                <div class="small-6 medium-6 large-6 columns end">
+                    <input type="password" id="passwordre" required>
+                </div>
+            </div>
+            <div class="row">
+                <span class="agreement">En créant votre compte, vous acceptez l'intégralité de nos Conditions générales de vente.</span>
+            </div>
+            <div class="row">
+                <div class="small-offset-3 medium-offset-3 large-offset-3 small-6 medium-6 large-6 columns end">
+                    <input class="registerSubmit" type="submit" value="Créer mon compte !">
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</form>
