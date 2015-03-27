@@ -71,3 +71,7 @@ div.prod-author-info {
 .btn-groupdeal.prod-btn {
     padding: 1.5rem 2rem 1.5rem !important;
 }
+
+.store-item {
+    margin-bottom: 1rem;
+}

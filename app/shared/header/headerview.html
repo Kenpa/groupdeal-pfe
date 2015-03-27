@@ -7,8 +7,22 @@
             <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
         </ul>
 
-        <section class="top-bar-section">
+        <section class="top-bar-section" ng-controller="StoreController">
             <ul class="right">
+                <li class="store has-dropdown not-click">
+                    <a href="">
+                        <i class="fi-shopping-cart"> </i>Mon panier 
+                        <span class="label nbProdBadge">{{ store.length }} </span>
+                    </a>
+                    <ul class="dropdown">
+                        <li ng-repeat="prod in store" store-prod>
+                            <a href="">{{ prod.title }}</a>
+                        </li>
+                        <li class="has-form">
+                            <a href="/app/components/store/store.html" class="store button">Voir mon panier</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="login"><a href="#"><i class="fi-torso"> </i>Se connecter</a></li>
                 <li class="register"><a data-reveal-id="registerModal"><i class="fi-pencil"> </i>S'inscrire</a></li>
             </ul>
@@ -24,7 +38,7 @@
             <section class="top-bar-section">
                 <ul class="navlist">
                     <li><a href="/index.html">Accueil</a></li>
-                    <li><a href="#">Proposer une offre</a></li>
+                    <li><a data-reveal-id="offerModal">Proposer une offre</a></li>
                     <li class="has-dropdown not-click">
                         <a href="#">Catégories</a>
                         <ul class="dropdown text-left">

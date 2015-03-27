@@ -25,7 +25,45 @@
         <!-- Header and navbar -->
         <gd-header></gd-header>
         
-		<div ng-view></div>
+		<div class="listproduct" ng-controller="StoreController">           
+            <div class="row cat-header">
+                <div class="small-8 medium-8 columns">
+                    <h3 class="cur-cat">Mon panier</h3>
+                </div>
+                <div class="small-4 medium-4 columns">
+                    <a href="#" class="button btn-groupdeal showallcat right">Passer la commande</a>
+                </div>
+                <hr>
+            </div>
+
+            <div class="row store-item" ng-repeat="item in store">
+                <div class="small-3 medium-3 large-3 columns">
+                    <img class="thb-img" ng-src="{{item.images}}">
+                </div>
+                <div class="small-9 medium-9 large-9 columns item-desc-store">
+                    <div class="small-6 medium-6 large-6 columns">
+                        <h5 class="store-prod-title">{{ item.title }}</h5>
+                        <span class="store-remain">Il ne reste plus que {{ item.maxOffers - item.curOffers }} exemplaire(s).</span><br>
+                        <span class="store-author">Soumis par : {{ item.author }}</span><br>
+                        <span class="store-desc">{{ item.desc }}</span>
+                        <a class="store-del" ng-click="storeDel(item.id)">Supprimer</a>
+                    </div>
+                    <div class="small-3 medium-3 large-3 columns">
+                        <span class="store-np">{{item.newPrice | currency:"&euro;" }}</span><br>
+                        <span class="store-op">{{item.oldPrice | currency:"&euro;" }}</span>
+                    </div>
+                    <div class="small-3 medium-3 large-3 columns end">
+                        <span class="store-qte">Quantité :</span>
+                        <select class="store-qte-sel">
+                            <option>1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="columns">
+                    <hr>
+                </div>
+            </div>          
+        </div>
                
         <!-- Footer -->
         <gd-footer></gd-footer>
@@ -33,7 +71,7 @@
         <!-- Register modal -->
         <register id="registerModal" class="reveal-modal" data-reveal></register>
         
-                <!-- Offer modal -->
+        <!-- Offer modal -->
         <offer id="offerModal" class="reveal-modal" data-reveal></offer>
 
         
@@ -58,7 +96,8 @@
         
         <script type="text/javascript" src="../../shared/register/register.module.js"></script>
         <script type="text/javascript" src="../../shared/register/register.directive.js"></script>
-        
+
+                
         <script type="text/javascript" src="../../shared/offer/offer.module.js"></script>
         <script type="text/javascript" src="../../shared/offer/offer.directive.js"></script>
                         
@@ -74,13 +113,6 @@
         <script type="text/javascript" src="../../components/category/product-specific/product-specific.service.js"></script>
         
         <script type="text/javascript" src="../../components/store/store.module.js"></script>
-        
-        <!-- External plugins -->
-        <script type="text/javascript">var switchTo5x=true;</script>
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">
-            $(document).foundation();
-            stLight.options({publisher: "13577a47-f840-4d71-875f-cb350f617fa9", doNotHash: false, doNotCopy: false, hashAddressBar: false});
-        </script>
+
 	</body>
 </html>

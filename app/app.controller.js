@@ -64,7 +64,7 @@
             {
                 id : 5,
                 title : 'Samsung Galaxy S4',
-                desc : '',
+                desc : 'Un smartphone qui date, mais qui est toujours aussi bien !',
                 category : 'hightech',
                 author : 'Pikachu',
                 tags : ['smartphone','samsung'],
@@ -215,4 +215,17 @@
         }
         
     });
+    
+    angular.module('app').controller('StoreController', ['$scope', 'AddProductService', function($scope, AddProductService) {         
+        
+        $scope.store = AddProductService.getStore();
+        $scope.addProduct = function(item) {
+            AddProductService.addProduct(item);
+        };
+        
+        $scope.storeDel = function(idItem) {
+            AddProductService.delProduct(idItem);
+        };
+        
+    }]);
 })();

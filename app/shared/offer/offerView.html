@@ -1,0 +1,81 @@
+<form>
+    <div class="registerTitle">
+        <span class="title">Envie de partager une offre ?</span>
+    </div>
+    <div class="row registerContent">
+        <div class="small-12 medium-12 large-12 columns"> 
+            <fieldset>
+                <legend>Votre annonce</legend>
+                <div class="row">
+                    <div class="small-3 medium-3 large-3 columns">
+                        <label for="identity-firstname" class="right inline">Titre de l'offre</label>
+                    </div>
+                    <div class="small-9 medium-9 large-9 columns end">
+                        <input type="text" id="identity-firstname" required autofocus>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="small-3 medium-3 large-3 columns">
+                        <label for="identity-lastname" class="right inline">Description</label>
+                    </div>
+                    <div class="small-9 medium-9 large-9 columns end">
+                        <textarea rows="3" required></textarea>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="small-3 medium-3 large-3 columns">
+                        <label for="email" class="right inline">Nouveau prix</label>
+                    </div>
+                    <div class="small-3 medium-3 large-3 columns end">
+                        <input type="number" id="email" required>
+                    </div>
+                    <div class="small-3 medium-3 large-3 columns">
+                        <label for="email" class="right inline">Prix de base</label>
+                    </div>
+                    <div class="small-3 medium-3 large-3 columns end">
+                        <input type="number" id="email" required>
+                    </div>
+                </div>
+            </fieldset><br>
+            <fieldset>
+                <legend>Informations supplémentaires</legend>
+                <div class="row">
+                    <div class="small-3 medium-3 large-3 columns">
+                        <label for="username" class="right inline">Catégorie</label>
+                    </div>
+                    <div class="small-9 medium-9 large-9 columns end">
+                        <select class="category" id="username" required autofocus>
+                            <option>High-Tech</option>
+                            <option>Loisirs</option>
+                            <option>Mode</option>
+                            <option>Electroménager</option>
+                            <option>Voyages</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-3 medium-3 large-3 columns">
+                        <label for="passwordre" class="right inline">Qté disponible</label>
+                    </div>
+                    <div class="small-3 medium-3 large-3 columns end">
+                        <input type="number" id="passwordre" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-3 medium-3 large-3 columns">
+                        <label for="image" class="right inline">Images</label>
+                    </div>
+                    <div class="small-9 medium-9 large-9 columns end">
+                        <input type="file" id="image" required>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row">
+                <div class="small-offset-3 medium-offset-3 large-offset-3 small-6 medium-6 large-6 columns end">
+                    <input class="registerSubmit" type="submit" value="Poster mon offre !">
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</form>

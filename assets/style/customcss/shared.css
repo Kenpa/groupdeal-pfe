@@ -28,13 +28,13 @@ body {
 ---------------- NAV BARS -------------------
 -------------------------------------------*/
 
-nav li.login > a, nav li.register > a {
+nav li.login > a, nav li.register > a, nav li.store > a {
     font-family: 'Raleway', serif;
     font-weight: 500;
     color: #bdbdbd !important; 
 }
 
-nav li.login > a:hover, nav li.register > a:hover {
+nav li.login > a:hover, nav li.register > a:hover, nav li.store > a:hover {
     color: #fff !important; 
 }
 
@@ -238,4 +238,88 @@ a.facebook:hover, a.twitter:hover {
 nav.navigationbar ul li a.searchres {
     background: none !important;
     color : black !important;
+}
+.top-bar-section .dropdown li a.store {
+    line-height: 1.8rem !important;
+    padding: 0 !important;
+    background-color: #825be3;
+}
+.top-bar-section .dropdown li a.store:hover {
+    background-color: #967adc;
+}
+.store-prod-title {
+    font-weight: 600;
+    line-height: 0.5rem;
+}
+.store-remain {
+    font-size: 0.8rem;
+    color : mediumvioletred;
+}
+
+.store-author {
+    position: relative;
+    bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+.store-desc {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1rem !important;
+}
+.store-np {
+    position: relative;
+    bottom: 0.6rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #825be3;
+}
+.store-op {
+    position: relative;
+    bottom: 0.6rem;
+    text-decoration: line-through;
+}
+.store-qte {
+    position: relative;
+    bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+.store-del {
+    position: relative;
+    top: 0.5rem;
+    text-decoration: underline;
+    color : black;
+    font-size: 0.8rem;
+}
+select.store-qte-sel {
+    outline:none;
+    font-size: 0.8rem;
+    height: 2rem;
+    padding: 0 0.5rem 0 0.5rem;
+    margin-right: 0.5rem;
+}
+fieldset {
+    margin: auto;
+    width: 90%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+legend {
+    font-family: 'Raleway', serif;
+    color : gray;
+}
+
+textarea {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.category {
+    font-size: 0.8rem;
+}
+
+input[type='file'] {
+    position: relative;
+    top:7px;
+    font-size: 0.8rem;
 }
