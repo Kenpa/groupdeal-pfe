@@ -152,17 +152,17 @@
             }
         ];
     
-    angular.module('app').controller('LookupController', ['$scope', function($scope) {
-        $scope.items = products;
+    angular.module('app').controller('LookupController', ['$scope', 'AddOfferService', function($scope, AddOfferService) {
+        $scope.items = products.concat(AddOfferService.getOffers());
         $scope.state = closed;
         $scope.change = function() {
             var filtered = $filter('filter')($scope.items, $scope.query);
         };
     }]);
     
-    angular.module('app').controller('ProductsController', function() {
+    angular.module('app').controller('ProductsController', ['AddOfferService', function(AddOfferService) {
         var list = this;
-        this.products = products;
+        this.products = products.concat(AddOfferService.getOffers());
         
         this.categories = 
             [
@@ -214,7 +214,7 @@
             return list.products[i];
         }
         
-    });
+    }]);
     
     angular.module('app').controller('StoreController', ['$scope', 'AddProductService', function($scope, AddProductService) {         
         
@@ -225,6 +225,31 @@
         
         $scope.storeDel = function(idItem) {
             AddProductService.delProduct(idItem);
+        };
+        
+    }]);
+    
+    angular.module('app').controller('OfferController', ['$scope', 'AddOfferService', function($scope, AddOfferService) {         
+        
+        $scope.offer = {
+                id : products.concat(AddOfferService.getOffers()).length+1,
+                title : '',
+                desc : "",
+                category : '',
+                tags : [],
+                author : 'Pikachu',
+                images : "/assets/img/nike.jpg",
+                oldPrice : null,
+                newPrice : null,
+                curOffers : 0,
+                maxOffers : null,
+                isHot :false
+            };
+        
+        console.log($scope.offer);
+        
+        $scope.addOffer = function(item) {
+            AddOfferService.addOffers(item);
         };
         
     }]);
